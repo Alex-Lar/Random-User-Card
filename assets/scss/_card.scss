@@ -1,0 +1,181 @@
+.card {
+    position: relative;
+    padding: .7rem 0 1.5rem 0;
+    width: 100%;
+    max-width: 600px;
+    min-width: 310px;
+    height: auto;
+
+    border: 2px solid $maincolor;
+    border-radius: 1.2em;
+}
+
+// ****************************************** 
+
+
+.card {
+
+    &__container {
+        width: 100%;
+        max-width: 600px;
+        min-width: 310px;
+        height: 315px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding-right: 30px;
+
+        width: 100%;
+        max-width: 600px;
+        height: 90px;
+        background-color: $maincolor;
+        border-radius: 1em 1em 0 0;
+
+        .btn__refresh {
+            font-size: 20px;
+            color: #fff;
+    
+            border: none;
+            background-color: transparent;
+            transition: opacity .2s linear;
+            opacity: .7;
+    
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &__body {
+        position: relative;
+        padding: 25px 0 25px 0;
+        width: 100%;
+        max-width: 600px;
+
+        border: 2px solid $maincolor;
+        border-radius: 0 0 1em 1em;
+    }
+
+    &__image {
+        position: absolute;
+        top: -37%;
+        left: -50%;
+        right: -50%;
+
+        margin: 0 auto;
+        padding: .25rem;
+        width: 100%;
+        max-width: 146px;
+        height: 146px;
+        border: 1px solid $maincolor;
+        border-radius: 50%;
+        background-color: #fff;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+.info {
+    margin: 3.2rem 0 1.8rem 0;
+    text-align: center;
+    font-style: normal;
+
+    &__text {
+        margin-bottom: 8px;
+        font-family: 'Mulish', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: $lightgrey;
+    }
+
+    &__title {
+        font-family: 'Mulish', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        color: $black;
+    }
+}
+
+
+.buttons {
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: 100%;
+    max-width: 325px;
+}
+
+.btn {
+    position: relative;
+
+    font-size: 25px;
+    color: $lightgrey;
+    background-color: transparent;
+    border: none;
+
+    opacity: .6;
+    transition: all .3s linear;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 100%;
+
+        height: 3px;
+        background-color: $maincolor;
+        transition: all .2s linear;
+        opacity: 1;
+    }
+
+    &:hover {
+        color: $maincolor;
+        opacity: .8;
+        transition: all .3s linear;
+        opacity: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 60%;
+
+            height: 3px;
+            background-color: $maincolor;
+
+        }
+    }
+
+    &:focus {
+        color: $maincolor;
+        opacity: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+
+            height: 3px;
+            background-color: $maincolor;
+            transition: all .3s ease;
+        }
+    }
+
+}
