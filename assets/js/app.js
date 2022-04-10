@@ -1,3 +1,4 @@
+let buttons = document.querySelectorAll('.btn');
 let refresh = document.querySelector('.btn__refresh');
 let userData = null;
 
@@ -6,6 +7,7 @@ const request = async (url) => {
         let res = await fetch(url);
         let data = await res.json();
         userData = data.results[0];
+        console.log(userData);
         displayInfo(userData);
     } catch (error) {
         console.error(error);
@@ -13,13 +15,11 @@ const request = async (url) => {
 };
 
 refresh.addEventListener('click', function () {
-    request("https://randomuser.me/api/?nat=au,ca,ch,de,es,fi,us");
+    request("https://randomuser.me/api/?nat=us");
 });
 
+request("https://randomuser.me/api/?nat=us");
 
-
-
-let buttons = document.querySelectorAll('.btn');
 
 buttons.forEach((value, index) => {
     value.addEventListener("click", () => {
@@ -52,7 +52,7 @@ function displayInfo(data) {
     let userImage = document.querySelector("#user-image");
 
     text.innerHTML = "Hi, My name is";
-    title.innerHTML = `${data.name.first} ${data.name.second}`;
+    title.innerHTML = `${data.name.first} ${data.name.last}`;
 
     userImage.src = data.picture.large;
 }
@@ -60,7 +60,7 @@ function displayInfo(data) {
 
 function showName(data, text, title) {
     text.innerHTML = "Hi, My name is";
-    title.innerHTML = `${data.name.first} ${data.name.second}`;
+    title.innerHTML = `${data.name.first} ${data.name.last}`;
 }
 
 
