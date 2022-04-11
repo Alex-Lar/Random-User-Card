@@ -57,7 +57,6 @@ function displayInfo(data) {
     userImage.src = data.picture.large;
 }
 
-
 function showName(data, text, title) {
     text.innerHTML = "Hi, My name is";
     title.innerHTML = `${data.name.first} ${data.name.last}`;

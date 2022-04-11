@@ -117,17 +117,6 @@ body {
   font-size: 16px;
 }
 
-.card {
-  position: relative;
-  padding: .7rem 0 1.5rem 0;
-  width: 100%;
-  max-width: 600px;
-  min-width: 310px;
-  height: auto;
-  border: 2px solid #D99C00;
-  border-radius: 1.2em;
-}
-
 .card__container {
   width: 100%;
   max-width: 600px;
@@ -149,7 +138,7 @@ body {
   width: 100%;
   max-width: 600px;
   height: 90px;
-  background-color: #D99C00;
+  background-color: #B7A64E;
   border-radius: 1em 1em 0 0;
 }
 
@@ -172,7 +161,7 @@ body {
   padding: 25px 0 25px 0;
   width: 100%;
   max-width: 600px;
-  border: 2px solid #D99C00;
+  border: 2px solid #B7A64E;
   border-radius: 0 0 1em 1em;
 }
 
@@ -186,7 +175,7 @@ body {
   width: 100%;
   max-width: 146px;
   height: 146px;
-  border: 1px solid #D99C00;
+  border: 1px solid #B7A64E;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -251,14 +240,14 @@ body {
   left: 0;
   right: 100%;
   height: 3px;
-  background-color: #D99C00;
+  background-color: #B7A64E;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   opacity: 1;
 }
 
 .btn:hover {
-  color: #D99C00;
+  color: #B7A64E;
   opacity: .8;
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
@@ -272,22 +261,22 @@ body {
   left: 0;
   right: 60%;
   height: 3px;
-  background-color: #D99C00;
+  background-color: #B7A64E;
 }
 
-.btn:focus {
-  color: #D99C00;
+.btn:focus, .btn:checked {
+  color: #B7A64E;
   opacity: 1;
 }
 
-.btn:focus::after {
+.btn:focus::after, .btn:checked::after {
   content: "";
   position: absolute;
   bottom: -3px;
   left: 0;
   right: 0;
   height: 3px;
-  background-color: #D99C00;
+  background-color: #B7A64E;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
